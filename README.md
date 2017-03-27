@@ -148,6 +148,22 @@ Summary steps:
 - Add second image from JavaScript.
 - Configure the loader.
 
+### 05 Import Materialize
+
+In this demo we will install and configure webpack to import the Google framework [Materialize](http://materializecss.com/).
+
+We will start from sample _01 Styles / 01 Custom CSS_.
+
+Summary steps:
+ - Fix jQuery dependency version.
+ - Install Materialize.
+ - Import the CSS and JS library.
+ - Use a card element from Materialize in our HTML.
+ - Check that we get errors when running webpack.
+ - Install additional loaders in order to manage fonts and other
+ files required by Materialize.
+ - Check results.
+
 ## 02 Fx (frameworks / libraries / languages)
 
 ### 00 TypeScript
@@ -169,13 +185,13 @@ Summary steps:
 
 In this demo we will add support for React.
 
-We will start from sample _01 Styles/03 SASS_, install react locally, update the `students.js` to jsx and include some basic rendering.
+We will start from sample _01 Styles / 03 SASS_, install React locally, update `students.js` to `students.jsx` and include some basic rendering.
 
 Summary steps:
- - Install reactjs as a local dependency.
- - Update `students.js` to `students.jsx` and update content.
- - Let's resolve the jsx extensions and point out the the entry point has changed.
- - Configure the `webpack.config.js` to support jsx.
+ - Install [React](https://facebook.github.io/react/) as a local dependency.
+ - Update `students.js` to `students.jsx` and update its content accordingly.
+ - Resolve the `jsx` extensions and point out that the entry point has changed.
+ - Configure the `webpack.config.js` to support `jsx`.
 
 ### 02 Angular
 
@@ -260,7 +276,21 @@ Summary steps:
 - Create other component and scss file with same class name.
 - Create selector using custom class and Bootstrap class.
 
-### 05 Production Configuration
+### 05 Commons Chunk Plugin
+
+In this demo we will learn how to split our application in different bundles and how does Webpack manage to do so with the CommonsChunkPlugin.
+We will also learn some tips and tricks.
+
+We will start from sample _02 Fx/00 TypeScript_.
+
+Summary steps:
+- Comment out the CommonsChunkPlugin to analyze what happens.
+- Add it back and see the changes.
+- Add a new third party library and see how the inline vendor grows.
+- create a vendor file as an alternative to inline vendor in the config.
+- move all the vendors imports there.
+
+### 06 Production Configuration
 
 In this demo we are going to create different builds for each environment.
 We will learn how to configure it and how to reduce bundle file sizes.
@@ -272,3 +302,59 @@ Summary steps:
 - Add webpack-merge package.
 - Add development config file.
 - Add production config file.
+
+### 07 DefinePlugin
+
+In this demo, we will see how can we do a basic usage of environment variables to enable the production mode of Angular
+
+We will start from sample _02 Fx/03 Angular 2_.
+
+Summary steps:
+- importing enableProdMode on index.ts.
+- adding an if clause that will enableProdMode based on the -p parameter.
+
+### 08 DefinePlugin advanced
+
+This demo shows how to have alternative API_URL for development and production
+
+Starts from sample _03 Misc/06 Production Configuration_.
+
+Summary steps:
+- create a students service and a student list component
+- See it working with hardcoded data
+- Update the service to use the dev endpoint
+- Update the component to use async data.
+- Update the dev and prod config to have environment variables
+- Update the services to use the new environment variables.
+
+### 09 Right pad library
+
+Do you want to create a library? This example is for you.
+
+We will start from scratch in here
+
+Summary steps:
+- npm init, to initialize the repo
+- install dependencies
+- create webpack config for libraries
+- put some tsconfig for typescript
+- generate library to see it working
+- add d.ts generation features
+- try it with "npm link"
+
+### 10 Right pad usage
+
+Here we try our new shiny library
+
+We start from sample _02 Fx/00 TypeScript_.
+
+Summary steps:
+- npm install
+- npm link right-pad
+- add right pad usage into students.ts
+- profit.
+
+# About Lemoncode
+
+We are a team of long-term experienced freelance developers, established as a group in 2010.
+We specialize in Front End technologies and .NET. [Click here](http://lemoncode.net/services/en/#en-home) to get more info about us. 
